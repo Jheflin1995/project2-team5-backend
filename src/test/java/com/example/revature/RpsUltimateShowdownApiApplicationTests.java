@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RolodexApiApplicationTests {
+class RpsUltimateShowdownApiApplicationTests {
 
 	@Test
 	void contextLoads() {
