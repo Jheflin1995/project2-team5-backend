@@ -1,6 +1,6 @@
 package com.revature.models;
 
-import java.util.HashMap;
+import java.io.Serializable;
 import java.util.List;
 import java.util.Set;
 
@@ -30,7 +30,7 @@ import lombok.NoArgsConstructor;
 @Table(name = "users")
 @Data @AllArgsConstructor @NoArgsConstructor
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
-public class User {
+public class User{
 
 	@Id
 	@Column(name = "user_id")
@@ -52,6 +52,8 @@ public class User {
 	@Email // checks for an @ symbol
 	private String email;
 	
+	//private int wins;
+	//private int gamesPlayed;
 	
 	// HashMap<String, List<Integer>> data = new HashMap();
 	//					[#wins,#uses]
