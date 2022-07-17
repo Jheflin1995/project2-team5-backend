@@ -49,8 +49,8 @@ public class AuthController {
 			String token = tokenManager.issueToken(user); //  xxxxx.yyyyyy.zzzzzzz
 			
 			// append the token to the response in the header
-			response.addHeader("rolodex-token", token);
-			response.addHeader("Access-Control-Expose-Headers", "rolodex-token");
+			response.addHeader("rps-ultimate-showdown-token", token);
+			response.addHeader("Access-Control-Expose-Headers", "rps-ultimate-showdown-token");
 			response.setStatus(200); // successful login
 			
 			// return the user as JSON
