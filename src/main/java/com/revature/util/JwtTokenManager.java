@@ -33,7 +33,7 @@ public class JwtTokenManager {
 				// payload 
 				.setId(String.valueOf(user.getId()))
 				.setSubject(user.getUsername())
-				.setIssuer("Rolodex API") // the source that generated the token
+				.setIssuer("RPS Ultimate Showdown API") // the source that generated the token
 				.setIssuedAt(new Date(System.currentTimeMillis()))
 				.signWith(key).compact();
 	}
