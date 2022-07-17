@@ -55,7 +55,7 @@ public class User{
 	@Email // checks for an @ symbol
 	private String email;
 	
-	@OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "id.user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private List<ThrowUsage> throwUsage;
 
 
