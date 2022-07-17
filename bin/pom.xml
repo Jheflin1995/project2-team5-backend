@@ -10,10 +10,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.revature</groupId>
-	<artifactId>rps-ultimate-showdown-api</artifactId>
+	<artifactId>rolodex-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>rolodex-api</name>
-	<description>RESTful API for an RPS project</description>
+	<description>Demo project for a RESTful API</description>
 	<properties>
 		<java.version>1.8</java.version>
 	</properties>
@@ -57,15 +57,6 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.mockito/mockito-core 
-		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-core</artifactId>
-			<version>4.6.1</version>
-			<scope>test</scope>
-		</dependency>-->
-
-
 		<!-- dependency for JWT -->
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
@@ -92,10 +83,10 @@
 	</dependencies>
 
 	<build>
-
-		<finalName>${project.artifactId}</finalName>
-
-
+	
+	<finalName>${project.artifactId}</finalName>
+	
+	
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
