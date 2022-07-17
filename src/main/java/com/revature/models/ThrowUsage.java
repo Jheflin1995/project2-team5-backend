@@ -27,7 +27,7 @@ public class ThrowUsage {
 	
 	@Embeddable
 	@Data @AllArgsConstructor @NoArgsConstructor
-	@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
+	//@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
     static class Pk implements Serializable{
         @ManyToOne
         @JoinColumn(name = "user_id")
