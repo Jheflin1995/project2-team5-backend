@@ -2,6 +2,7 @@ package com.example.revature;
 
 import static org.mockito.Mockito.when;
 
+import java.util.ArrayList;
 import java.util.Optional;
 
 import org.junit.jupiter.api.Test;
@@ -14,6 +15,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import com.revature.data.UserRepository;
 import com.revature.dto.Credentials;
 import com.revature.exceptions.AuthenticationException;
+import com.revature.models.ThrowUsage;
 import com.revature.models.User;
 import com.revature.service.UserService;
 
@@ -56,7 +58,22 @@ class RpsUltimateShowdownApiApplicationTests {
 		assertThrows(AuthenticationException.class, () -> userv.authenticate(creds));
 	}
 	
-	//UserService Add Test Succeed
+	//UserService Add (registration) Test Succeed
+	@Test
+	public void testSuccessfulAdd() {
+		dummyUser = new User("test","test","test","test","test@mail.com");
+		User dummyUserTwo = new User(1, "test","test","test","test","test@mail.com", new ArrayList<ThrowUsage>());
+		
+		when(mockRepo.save(dummyUser)).thenReturn(dummyUserTwo);
+		
+		User expectedUser = dummyUserTwo;
+		User actualUser = userv.add(dummyUser);
+		
+		assertEquals(expectedUser, actualUser);
+	}
+		
+		
+	
 	//UserService Add Test Fail
 	//UserService GetByUserName Succeed
 	//UserService GetByUserName Fail
