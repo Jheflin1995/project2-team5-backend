@@ -71,11 +71,11 @@ class RpsUltimateShowdownApiApplicationTests {
 		
 		assertEquals(expectedUser, actualUser);
 	}
-		
-		
 	
-	//UserService Add Test Fail
 	//UserService GetByUserName Succeed
+	public void testSuccessfulGetByUsername() {
+		
+	}
 	//UserService GetByUserName Fail
 	//UserService GetById Succeed
 	//UserService GetByID Fail
