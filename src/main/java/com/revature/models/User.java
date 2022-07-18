@@ -32,7 +32,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "users")
 @Data @AllArgsConstructor @NoArgsConstructor
-@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id", scope = User.class)
 public class User{
 
 	@Id
@@ -55,7 +55,7 @@ public class User{
 	@Email // checks for an @ symbol
 	private String email;
 	
-	@OneToMany(mappedBy = "id.user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	private List<ThrowUsage> throwUsage;
 
 
