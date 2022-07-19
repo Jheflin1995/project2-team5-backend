@@ -42,10 +42,13 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+
+		<!-- <dependency> <groupId>com.h2database</groupId> <artifactId>h2</artifactId> 
+			<scope>runtime</scope> </dependency> -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -57,13 +60,9 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.mockito/mockito-core 
-		<dependency>
-			<groupId>org.mockito</groupId>
-			<artifactId>mockito-core</artifactId>
-			<version>4.6.1</version>
-			<scope>test</scope>
-		</dependency>-->
+		<!-- https://mvnrepository.com/artifact/org.mockito/mockito-core <dependency> 
+			<groupId>org.mockito</groupId> <artifactId>mockito-core</artifactId> <version>4.6.1</version> 
+			<scope>test</scope> </dependency> -->
 
 
 		<!-- dependency for JWT -->
@@ -88,6 +87,8 @@
 			<version>0.11.2</version>
 			<scope>runtime</scope>
 		</dependency>
+
+
 
 	</dependencies>
 
