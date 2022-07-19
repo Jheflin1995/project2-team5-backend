@@ -27,11 +27,18 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "users")
-@Data @AllArgsConstructor @NoArgsConstructor
+//@Data
+@Getter
+@Setter
+@EqualsAndHashCode
+@AllArgsConstructor @NoArgsConstructor
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id", scope = User.class)
 public class User{
 

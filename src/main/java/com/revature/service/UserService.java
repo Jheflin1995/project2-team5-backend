@@ -57,7 +57,7 @@ public class UserService {
 	@Transactional(propagation = Propagation.REQUIRES_NEW)
 	public User add(User u) {
 
-
+		System.out.println("add triggered in userve");
 		return userRepo.save(u);
 	}
 

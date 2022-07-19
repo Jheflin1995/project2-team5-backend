@@ -38,6 +38,7 @@ public class UserController {
 	
 	@PostMapping("/add") // http://localhost:5000/api/users/add
 	public ResponseEntity<User> addUser(@Valid @RequestBody User u) {
+		System.out.println("add ran");
 		return  ResponseEntity.ok(userv.add(u));
 	}
 
@@ -55,5 +56,6 @@ public class UserController {
 	public void removeUser(@PathVariable("id") int id) {
 		userv.remove(id);
 	}
+	
 
 }
